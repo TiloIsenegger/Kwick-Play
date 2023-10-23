@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="../StyleSheet.css">
+    <link rel="stylesheet" href="UnscrambleStyleSheet.css">
+    <script src="../miscellaneous.js"></script>
+    <script src="UnscrambleJavascript.js"></script>
+    <title>Kwick-Play</title>
+    <link rel="icon" type="image/png" href="../Pictures/WebsiteLogo.png" />
+    <script src="https://kit.fontawesome.com/c00e3782f8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="pageTitle">Unscramble</div>
+
+    <div class="navBar">
+        
+        <a class="navBarPart" id="navBarIcon" href="../index.html">
+            <img class="navBarIconImg" src="../Pictures/Main/NavBar/NavBarHomeWhite.png" alt="home">
+        </a>
+
+    </div>
+
+    <div class="main">
+
+        <div class="content">
+
+            <div class="programm">
+
+                <a class="backButton" href="../index.html">&lt;</a>
+                <!-- &lt; = < , backbutton-->
+
+                <div class="InfoDropdown" onclick="changeInfoDropdownVisibility('InfoDropdownContent')">
+                    <img class="DropdownPic" src="../Pictures/i/info symbol.png" alt="info">
+                    <div class="Dropdown-content" id="InfoDropdownContent">
+                        <p> 
+                            Es muss ein zufällig vermischtes Wort herausgefunden werden <br><br>
+                            Ist es richtig, bekommt der Spieler einen Punkt und es wird ein neues Wort ausgewählt <br><br>
+                            Ziel ist es, in der Vorgegebenen Zeit so viele Punkte wie möglich zu sammeln <br>                            
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="SettingsDropdown" onclick="changeInfoDropdownVisibility('SettingsDropdownContent')">
+                    <img class="DropdownPic" src="../Pictures/i/gear.png" alt="settings">
+                    <div class="SettingsDropdown-content" id="SettingsDropdownContent">
+
+                        <p style="margin: 0; text-align: left; text-decoration: underline;" id="UnscrambleDifficulty">
+                            Aktuelle Schwierigkeit: 2
+                        </p>
+
+                        <div class="SettingsDropdown-link">
+                            Schwierigkeit ändern
+
+                            <button class="SettingsButton" id="UnscrambleDifficultyButtonAdd"
+                                onclick="changeUnscrambleDifficulty('add')">&gt;
+                            </button>
+
+                            <button class="SettingsButton SettingsButton2" id="UnscrambleDifficultyButtonDeduct"
+                                onclick="changeUnscrambleDifficulty('deduct')">&lt;
+                            </button>
+                        </div>
+
+                        <p style="margin: 0; text-align: left; text-decoration: underline;" id="UnscrambleCountdown">
+                            Aktueller Timer: 2:00
+                        </p>
+
+                        <div class="SettingsDropdown-link">
+                            Timer ändern
+
+                            <button class="SettingsButton" id="UnscrambleCountdownButtonAdd"
+                                onclick="changeUnscrambleCountdown('add')">&gt;
+                            </button>
+                            
+                            <button class="SettingsButton SettingsButton2" id="UnscrambleCountdownButtonDeduct"
+                                style="margin-left: 1vw;" onclick="changeUnscrambleCountdown('deduct')">&lt;
+                            </button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <p class="output pointOfInterest" id="outputmessages" style="margin-top: 2.604vw;">Starte das Spiel</p>
+
+                <div class="countdown pointOfInterest" id="countdown">Verbleibende Zeit:<br>2:00</div>
+                <!-- countdown -->
+
+                <div class="points pointOfInterest" id="points">Punkte:<br><span id="number">0</span></div>
+                <!-- wordcounter -->
+
+                <p class="output pointOfInterest" id="outputScrambledWord" style="display: none; margin-top: 1.042vw;">
+                </p>
+
+                <div class="row"> <!-- input row -->
+                    <Input autocomplete="off" type="text" id="WordInput" placeholder="Worteingabe"
+                        disabled="true"></Input>
+                </div>
+
+                <div class="row"> <!-- 2 buttons get changed during game, for different functions -->
+                    <button class="miscButton" id="generateWord" style="display: inline-block;"
+                        onclick="countdown(), getWord();">Spiel Starten</button>
+                    <!-- onclick, start countdown and chose random word -->
+
+                    <button class="miscButton" id="submitWord" style="display: none;" disabled="true"
+                        onclick="testInputWord()">Eingeben</button> <!-- test word input -->
+
+                    <button class=" skipButton" id="skipButton" style="display: none;"
+                        onclick="skip()">&#10148;</button>
+
+                    <button class="restartButtonUnscramble" id="restartButton" style="display: none;"
+                        onclick="StartRestartAnimation()"><img class="restartButtonImg" id="restartButtonImg"
+                            src="../Pictures/restart.png" alt=""></button>
+                </div>
+            </div>
+
+            <script>
+
+                WordInput.addEventListener("keypress", function (event) {  // eventlistener, so you can also press enter instead of pressing the butten
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+                        document.getElementById("submitWord").click();
+                    }
+                });
+
+            </script>
+
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <img id="footerPic" src="../Pictures/WebsiteLogo.png" alt="footerPic">
+        <br>
+        <p>Kwick-Play</p>
+        <a class="footerLinks" href="../Footer/support.html">Support</a>
+        <br>    
+        <br>
+        <a class="footerLinks" href="../Footer/ImageSources.html">Bildquellen</a> &
+        <a class="footerLinks" href="../Footer/licence.html">Lizenzen</a>
+    </div>
+
+</body>
+
+</html>

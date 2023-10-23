@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="../StyleSheet.css">
+    <link rel="stylesheet" href="TicTacToeStyleSheet.css">
+    <script src="../miscellaneous.js"></script>
+    <script src="tictactoe2playerJavaScript.js"></script>
+    <title>Kwick-Play</title>
+    <link rel="icon" type="image/png" href="../Pictures/WebsiteLogo.png" />
+
+
+</head>
+
+<body>
+
+    <div class="pageTitle">Tic Tac Toe</div>
+
+    <div class="navBar">
+        
+        <a class="navBarPart" id="navBarIcon" href="../index.html">
+            <img class="navBarIconImg" src="../Pictures/Main/NavBar/NavBarHomeWhite.png" alt="home">
+        </a>
+        
+    </div>
+
+    <div class="main">
+
+        <div class="content">
+
+            <div class="programm">
+
+                <a class="backButton" href="playerSelectiontictatoe.html">&lt;</a>
+                <!-- &lt; = < href="../tictactoe/playerSelectiontictatoe.html" -->
+
+                <div class="InfoDropdown" onclick="changeInfoDropdownVisibility('InfoDropdownContent')">
+                    <img class="DropdownPic" src="../Pictures/i/info symbol.png" alt="info">
+                    <div class="Dropdown-content" id="InfoDropdownContent">
+                        <p> 
+                            2 Spieler spielen gegeneinander <br>
+                            Sie sind abwechselnd am Zug <br>
+                            Wer zuerst 3 Symbole nebeneinander hat, gewinnt
+                        </p>
+                    </div>
+                </div>
+
+                <p class="output pointOfInterest" id="outputmessages">X beginnt</p>
+
+                <div class="tictactoeGrid"><!-- tictactoe grid components -->
+
+                    <div class="gridRow">
+
+                        <div class=" field">
+                            <div id="1" onclick="claimField(1)" class="tictactoeButton">
+                                <img id="img1" class="XorO" src="../Pictures/TicTacToe/X.png" alt="X">
+                            </div>
+                        </div>
+
+                        <div class="small-pillar"></div>
+
+                        <div class="field">
+                            <div id="2" onclick="claimField(2)" class="tictactoeButton">
+                                <img id="img2" class="XorO" src="../Pictures/TicTacToe/X.png" alt="X">
+                            </div>
+                        </div>
+
+                        <div class="small-pillar"></div>
+
+                        <div class="field">
+                            <div id=3 onclick="claimField(3)" class="tictactoeButton">
+                                <img id="img3" class="XorO" src="../Pictures/TicTacToe/X.png" alt="X">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="big-pillar"></div>
+
+                    <div class="gridRow">
+
+                        <div class="field">
+                            <div id=4 onclick="claimField(4)" class="tictactoeButton">
+                                <img id="img4" class="XorO" src="../Pictures/TicTacToe/X.png" alt="X">
+                            </div>
+                        </div>
+
+                        <div class="small-pillar"></div>
+
+                        <div class="field">
+                            <div id=5 onclick="claimField(5)" class="tictactoeButton">
+                                <img id="img5" class="XorO" src="../Pictures/TicTacToe/X.png" alt="X">
+                            </div>
+                        </div>
+
+                        <div class="small-pillar"></div>
+
+                        <div class="field">
+                            <div id=6 onclick="claimField(6)" class="tictactoeButton">
+                                <img id="img6" class="XorO" src="../Pictures/TicTacToe/X.png" alt="X">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="big-pillar"></div>
+
+                    <div class="gridRow">
+
+                        <div class="field">
+                            <div id=7 onclick="claimField(7)" class="tictactoeButton">
+                                <img id="img7" class="XorO" src="../Pictures/TicTacToe/X.png" alt="X">
+                            </div>
+                        </div>
+
+                        <div class="small-pillar"></div>
+
+                        <div class="field">
+                            <div id=8 onclick="claimField(8)" class="tictactoeButton">
+                                <img id="img8" class="XorO" src="../Pictures/TicTacToe/X.png" alt="X">
+                            </div>
+                        </div>
+
+                        <div class="small-pillar"></div>
+
+                        <div class="field">
+                            <div id=9 onclick="claimField(9)" class="tictactoeButton">
+                                <img id="img9" class="XorO" src="../Pictures/TicTacToe/X.png" alt="X">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+                <button class="restartButton" id="restart" style="visibility: hidden; margin: 0.521vw;"
+                    onclick="StartRestartAnimation()"><img class="restartButtonImg" id="restartButtonImg"
+                        src="../Pictures/restart.png" alt="restartPic"></button>
+
+                <script>
+
+                    function Debug() {
+
+                        for (let id = 1; id <= 9; id++) { // disable buttons
+                            document.getElementById(id).style.opacity = "1";
+                            document.getElementById(id).style.animation = "bugfixing 5s linear 1";
+                            document.getElementById(id).style.fontSize = "9vw";
+                        }
+
+                    }
+
+                </script>
+
+            </div>
+
+        </div>
+    </div> 
+
+    <div class="footer">
+        <img id="footerPic" src="../Pictures/WebsiteLogo.png" alt="footerPic">
+        <br>
+        <p>Kwick-Play</p>
+        <a class="footerLinks" href="../Footer/support.html">Support</a>
+        <br>    
+        <br>
+        <a class="footerLinks" href="../Footer/ImageSources.html">Bildquellen</a> &
+        <a class="footerLinks" href="../Footer/licence.html">Lizenzen</a>
+    </div>
+
+</body>
+
+</html>

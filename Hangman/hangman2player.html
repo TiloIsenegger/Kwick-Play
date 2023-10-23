@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="../StyleSheet.css">
+    <link rel="stylesheet" href="HangmanStyleSheet.css">
+    <script src="../miscellaneous.js"></script>
+    <script src="hangman2playerJavaScript.js"></script>
+    <title>Kwick-Play</title>
+    <link rel="icon" type="image/png" href="../Pictures/WebsiteLogo.png" />
+    <script src="https://kit.fontawesome.com/c00e3782f8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="pageTitle">Hangman</div>
+
+    <div class="navBar">
+
+        <a class="navBarPart" id="navBarIcon" href="../index.html">
+            <img class="navBarIconImg" src="../Pictures/Main/NavBar/NavBarHomeWhite.png" alt="home">
+        </a>
+
+    </div>
+
+    <div class="main">
+
+        <div class="content">
+
+            <div class="programm">
+
+                <a class="backButton" href="../Hangman/playerSelectionHangman.html">&lt;</a> <!-- &lt; = < -->
+
+                <div class="InfoDropdown" onclick="changeInfoDropdownVisibility('InfoDropdownContent')">
+                    <img class="DropdownPic" src="../Pictures/i/info symbol.png" alt="info">
+                    <div class="Dropdown-content" id="InfoDropdownContent">
+                        <p> Spieler 2 gibt Spieler 1 ein Wort zum erraten <br>
+                            Spieler 1 versucht das Wort zu erraten <br>
+                            <br>
+                            Wenn der Spieler das Wort herausfindet, bekommt er einen Punkt. Wenn nicht, geht dieser
+                            Punkt an den anderen Spieler <br>
+                            <br>
+                            Nach der Punktevergabe werden die Rollen getauscht <br>
+                            Das Spiel endet sobald der erste Spieler 5 Punkte hat
+
+
+                        </p>
+                    </div>
+                </div>
+
+
+                <p class="output pointOfInterest" id="outputmessages">Spieler 2: Wort eingeben</p>
+
+                <div id="tries" style="display: none;">9</div>
+
+                <div class="player1 pointOfInterest" id="player1">Spieler 1<br>0</div>
+
+                <div class="player2 pointOfInterest" id="player2">Spieler 2<br>0</div>
+
+                <img class="hangmanPic" id="hangmanPic" src="../Pictures/hangman/hm.png" alt="hangmanPic">
+
+                <div class="row">
+                    <Input autocomplete="off" type="text" id="wordInput" style="display: inline-block;"
+                        placeholder="Wort"></Input>
+                    <Input autocomplete="off" type="text" id="letterInput" style="display: none;"
+                        placeholder="Buchstabe"></Input>
+                </div>
+
+                <div class="row">
+                    <button class="miscButton" id="submitWord" style="display: inline-block;"
+                        onclick="getWord()">Eingeben</button>
+                    <button class="miscButton" id="submitLetter" style="display: none;"
+                        onclick="testInputLetter()">Eingeben</button>
+                    <button class="miscButton" id="nextRound" style="display: none;" onclick="nextRound()">Nächste
+                        Runde &#10148;</button> <!-- &#10148; = pfeil -->
+                    <button class="restartButton" id="restart" style="display: none;"
+                        onclick="StartRestartAnimation()"><img class="restartButtonImg" id="restartButtonImg"
+                            src="../Pictures/restart.png" alt=""></button>
+                </div>
+                <p class="output pointOfInterest" style="display: none;" id="outputHangman"></p>
+                <div class="pointOfInterest" id="outputUsedLetters">&nbsp;</div>
+
+            </div>
+
+            <script>
+
+                wordInput.addEventListener("keypress", function (event) { // eventlistener, so you can also press enter instead of pressing the butten
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+                        document.getElementById("submitWord").click();
+                        document.getElementById("letterInput").focus();
+                    }
+                });
+                letterInput.addEventListener("keypress", function (event) { // eventlistener, so you can also press enter instead of pressing the butten
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+                        document.getElementById("submitLetter").click();
+                    }
+                });
+
+            </script>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <img id="footerPic" src="../Pictures/WebsiteLogo.png" alt="footerPic">
+        <br>
+        <p>Kwick-Play</p>
+        <a class="footerLinks" href="../Footer/support.html">Support</a>
+        <br>
+        <br>
+        <a class="footerLinks" href="../Footer/ImageSources.html">Bildquellen</a> &
+        <a class="footerLinks" href="../Footer/licence.html">Lizenzen</a>
+    </div>
+
+</body>
+
+</html>

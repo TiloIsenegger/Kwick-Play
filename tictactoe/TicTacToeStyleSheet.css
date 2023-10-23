@@ -1,0 +1,112 @@
+:root {
+	--FourPx: 0.208vw;
+	--FourPxTransformed: 0.7488vw;
+
+	--TenPx: 0.521vw;
+	--TenPxTransformed: 1.8756vw;
+}
+
+
+@media only screen and (max-width: 700px) {
+
+	.tictactoeGrid {
+		width: 70vw !important;
+		height: 70vw !important;
+		margin: 7vw 0vw !important;
+	}
+
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.tictactoeGrid {
+	display: inline-block;
+	width: 26.042vw;
+	/* -> 70vw */
+	height: 26.042vw;
+	/* -> 70vw */
+	margin: 1.042vw 0vw;
+	/* -> 7vw 0vw */
+	font-size: 0;
+}
+
+.gridRow {
+	height: 30%;
+	width: 100%;
+}
+
+.field {
+	display: inline-block;
+	vertical-align: top;
+	/* essential */
+	width: 30%;
+	height: 100%;
+	padding: 0;
+}
+
+.small-pillar {
+	/* vertikaler Balken*/
+	display: inline-block;
+	width: 5%;
+	height: 100%;
+	background-color: black;
+	font-size: 0;
+}
+
+.big-pillar {
+	/* horizontaler Balken*/
+	width: 100%;
+	height: 5%;
+	background-color: black;
+	font-size: 0;
+}
+
+.tictactoeButton {
+	display: block;
+	opacity: 0;
+	color: black;
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 7vw;
+
+	/*font-family: 'Baloo Da 2', cursive;*/
+	background-color: transparent;
+	transition-duration: 0.25s;
+}
+
+@media only screen and (min-width: 700px) {
+	.tictactoeButton:hover {
+			/*display: block;*/
+	border: none;
+	background-color: transparent;
+	opacity: 1 !important;
+	/*font-family: 'Baloo Da 2', cursive;*/
+	}
+}
+
+.XorO {
+	width: 90%;
+	margin: 5%;
+}
+
+/* animations */
+
+@keyframes letterPulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.2);
+
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}

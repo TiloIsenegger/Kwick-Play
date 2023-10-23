@@ -1,0 +1,301 @@
+:root {
+
+	--FourPx: 0.208vw;
+	/* 4px */
+	--FourPxTransformed: 0.7488vw;
+
+	--TenPx: 0.521vw;
+	--TenPxTransformed: 1.8756vw;
+
+	--FinalPointsGrowFontSizeBevore: 1.3vw;
+	--FinalPointsGrowFontSizeAfter: 4.167vw;
+
+	--FinalPointsMarginTop: 1.042vw;
+}
+
+@media only screen and (max-width: 700px) {
+
+	* {
+		--FinalPointsGrowFontSizeBevore: 4.68vw;
+		--FinalPointsGrowFontSizeAfter: 13vw;
+		--FinalPointsMarginTop: 3.7512vw;
+	}
+
+	.points {
+		width: 30% !important;
+		font-size: 4.68vw !important;
+		margin-top: 3.7512vw !important;
+		margin-bottom: 3.7512vw !important;
+	}
+
+	.EndresultInfos {
+		font-size: 4.68vw !important;
+	}
+
+	.finalPoints {
+		--FourPx: var(--FourPxTransformed);
+		padding: 0 3.7512vw !important;
+	}
+
+	.countdown {
+		width: 60% !important;
+		font-size: 4.68vw !important;
+		margin-top: 3.7512vw !important;
+	}
+
+	#outputScrambledWord {
+		font-size: 8vw !important;
+	}
+
+	.restartButtonUnscramble {
+		--FourPx: var(--FourPxTransformed);
+		--TenPx: var(--TenPxTransformed);
+		width: 12% !important;
+		height: 12% !important;
+		transform: translateY(2.776vw) !important;
+	}
+
+	.restartButtonUnscramble:hover {
+		transform: translateY(2.516vw) !important;
+	}
+
+	.restartButtonUnscramble:active {
+		transform: scale(.98) translateY(2.776vw) !important;
+	}
+
+	.skipButton {
+		--FourPx: var(--FourPxTransformed);
+		--TenPx: var(--TenPxTransformed);
+		font-size: 3.6vw !important;
+		width: 9.3744vw !important;
+		height: 9.3744vw !important;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.points {
+	width: 15%;
+	/* -> 30% */
+	margin: auto;
+	margin-top: 1.042vw;
+	/* -> 3.7512vw */
+	margin-bottom: 1.042vw;
+	/* -> 3.7512vw */
+	font-size: 1.3vw;
+	/* -> 4.68vw */
+}
+
+.endresult {
+	width: 80%;
+	margin: auto;
+	margin-top: var(--FinalPointsMarginTop);
+
+	margin-bottom: 3.7512vw;
+
+	font-size: var(--FinalPointsGrowFontSizeAfter);
+
+}
+
+.EndresultInfos {
+	font-size: 1.3vw;
+}
+
+.finalPoints {
+	margin: auto;
+	padding: 0 1.042vw;
+	/* -> 0 3.7512vw */
+	border: var(--FourPx) solid rgb(18, 28, 34);
+	border-radius: 10000px;
+	width: fit-content;
+	display: inline-block;
+	animation: none;
+}
+
+.countdown {
+	width: 35%;
+	/* -> 60% */
+	margin: auto;
+	margin-top: 1.042vw;
+	/* -> 3.7512vw */
+	font-size: 1.3vw;
+	/* -> 4.68vw */
+}
+
+#outputScrambledWord {
+	font-size: 4.167vw;
+	/* -> 15.0012vw */
+	width: 100%;
+}
+
+.restartButtonUnscramble {
+	padding: 0.26vw;
+	/* -> 0.936vw */
+	border: var(--FourPx) solid black;
+	border-radius: 1000px;
+	box-shadow: 0 0.417vw 0.833vw 0 rgba(0, 0, 0, 0.2), 0 0.313vw 1.042vw 0 rgba(0, 0, 0, 0.19);
+	background-color: rgb(58, 95, 145);
+
+	width: 6%;
+	/* -> 12% */
+	height: 6%;
+	/* -> 12% */
+
+	transform: translateY(0.365vw);
+
+	-webkit-transition-duration: 0.25s;
+	/* Safari */
+	transition-duration: 0.25s;
+}
+
+.restartButtonUnscramble:hover {
+	box-shadow: 0 0.625vw 0.833vw 0 rgba(0, 0, 0, 0.24), 0 0.885vw 2.604vw 0 rgba(0, 0, 0, 0.19);
+	transform: translateY(0.26vw);
+}
+
+.restartButtonUnscramble:active {
+	transition-duration: 0.1s;
+	box-shadow: 0 0.417vw 0.833vw 0 rgba(0, 0, 0, 0.24), 0 0.521vw 1.563vw 0 rgba(0, 0, 0, 0.19);
+	transform: scale(.98) translateY(0.365vw);
+}
+
+.skipButton {
+	font-size: 1vw;
+	/* -> 3.6vw */
+	padding: 0.26vw;
+	/* -> 0.936vw */
+	border: var(--FourPx) solid rgb(18, 28, 34);
+	border-radius: var(--TenPx);
+	box-shadow: 0 0.417vw 0.833vw 0 rgba(0, 0, 0, 0.2), 0 0.313vw 1.042vw 0 rgba(0, 0, 0, 0.19);
+	background-color: rgb(58, 95, 145);
+	color: rgb(18, 28, 34);
+
+	width: 2.448vw;
+	/* -> 9.3744vw */
+	height: 2.448vw;
+	/* -> 9.3744vw */
+	margin-top: var(--TenPx);
+
+	-webkit-transition-duration: 0.25s;
+	/* Safari */
+	transition-duration: 0.25s;
+}
+
+.skipButton:hover {
+	box-shadow: 0 0.625vw 0.833vw 0 rgba(0, 0, 0, 0.24), 0 0.885vw 2.604vw 0 rgba(0, 0, 0, 0.19);
+	transform: translateY(-0.104vw);
+}
+
+.skipButton:active {
+	transition-duration: 0.1s;
+	box-shadow: 0 0.417vw 0.833vw 0 rgba(0, 0, 0, 0.24), 0 0.521vw 1.563vw 0 rgba(0, 0, 0, 0.19);
+	transform: scale(.98) translateY(0.156vw);
+}
+
+/*animations*/
+
+@keyframes warnsignal {
+
+	5% {
+		background-color: rgb(255, 0, 0);
+	}
+
+	45% {
+		background-color: rgb(255, 0, 0);
+	}
+
+	55% {
+		background-color: rgb(99, 124, 249);
+	}
+
+	95% {
+		background-color: rgb(99, 124, 249);
+	}
+
+}
+
+@keyframes finalPointsGrowAnimation {
+
+	0% {
+		font-size: var(--FinalPointsGrowFontSizeBevore);
+	}
+
+	100% {
+		font-size: var(--FinalPointsGrowFontSizeAfter);
+		width: 80%;
+		margin: auto;
+		margin-top: var(--FinalPointsMarginTop);
+	}
+}
+
+@keyframes finalPointsGrow {
+	0% {
+		font-size: var(--FinalPointsGrowFontSizeAfter);
+		width: 80%;
+		margin: auto;
+		margin-top: var(--FinalPointsMarginTop);
+	}
+
+	100% {
+		font-size: var(--FinalPointsGrowFontSizeAfter);
+		width: 80%;
+		margin: auto;
+		margin-top: var(--FinalPointsMarginTop);
+	}
+}
+
+@keyframes letterPulseGreen {
+	0% {
+		transform: scale(1);
+		background-color: rgb(99, 124, 249);
+	}
+
+	50% {
+		transform: scale(1.2);
+		background-color: green;
+
+	}
+
+	100% {
+		transform: scale(1);
+		background-color: rgb(99, 124, 249);
+	}
+}
+
+@keyframes letterPulseRed {
+	0% {
+		transform: scale(1);
+		background-color: rgb(99, 124, 249);
+	}
+
+	50% {
+		transform: scale(1.2);
+		background-color: red;
+
+	}
+
+	100% {
+		transform: scale(1);
+		background-color: rgb(99, 124, 249);
+	}
+}
+
+@keyframes SkipFailedRed {
+	0% {
+
+		background-color: rgb(99, 124, 249);
+	}
+
+	50% {
+
+		background-color: red;
+
+	}
+
+	100% {
+
+		background-color: rgb(99, 124, 249);
+	}
+}

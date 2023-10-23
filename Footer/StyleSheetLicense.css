@@ -1,0 +1,113 @@
+:root {
+	--FourPx: 0.208vw;
+	--FourPxTransformed: 0.7488vw;
+
+	--TenPx: 0.521vw;
+	--TenPxTransformed: 1.8756vw;
+
+	--LicenceCardWidthOnHover: 88%;
+	/* 84% 21vw */
+	--LicenceCardHeightOnHover: 96.666%;
+	/* 93.333% 28vw */
+}
+
+@media only screen and (max-width: 700px) {
+
+	.LicencePageTitle {
+		font-size: 15vw !important;
+		padding: 2.8116vw !important;
+	}
+
+	.LicenceCardSlot {
+		width: 100% !important;
+		height: 108vw !important;
+	}
+
+	.LicenceCard {
+		--TenPx: var(--TenPxTransformed);
+		--FourPx: var(--FourPxTransformed);
+	}
+
+	.LicenceCardDescription {
+		font-size: 3vw !important;
+	}
+
+}
+
+.LicencePageTitle {
+	width: 100vw;
+	text-align: center;
+	background-color: rgb(99, 124, 249);
+	/*CHANGE!*/
+	/*background-color: rgb(42, 0, 110);*/
+	/*border-radius: 0.521vw;*/
+	font-size: 5vw;
+	/* -> 18vw */
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	padding: 0.781vw;
+}
+
+.licence {
+	margin: 0;
+}
+
+.LicenceCardSlot {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 50%;
+	/* 37.5vw -> 50% */
+	height: 45vw;
+	/* -> 54vw */
+}
+
+.LicenceCard {
+	position: relative;
+	border: var(--FourPx) solid rgb(4, 19, 51);
+	border-radius: var(--TenPx);
+
+	width: 85%;
+	height: 95%;
+
+	background-color: rgb(99, 124, 249);
+	box-shadow: 0 0.208vw 0.417vw 0 rgba(0, 0, 0, 0.2), 0 0.313vw 1.042vw 0 rgba(0, 0, 0, 0.19);
+	transition: 0.3s;
+}
+
+.LicenceCardImg {
+	position: absolute;
+	/* positions the picture in the middle of the gamecard */
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	width: 80%;
+	height: auto;
+	object-fit: cover;
+	border: 0.104vw solid rgb(183, 201, 212);
+}
+
+.LicenceCard:hover {
+	box-shadow: 0 0.208vw 0.417vw 0.26vw rgba(0, 0, 0, 0.2), 0 0.313vw 1.042vw 0.26vw rgba(0, 0, 0, 0.19);
+	opacity: 0.9;
+
+	width: 88%;
+	height: 96.666%;
+
+	cursor: pointer;
+}
+
+.LicenceCardDescription {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(4, 19, 51);
+	color: white;
+
+	padding: 1vw 0;
+	font-size: 1vw;
+
+	font-weight: bold;
+	text-align: center;
+}

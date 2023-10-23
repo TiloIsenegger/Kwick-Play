@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="../StyleSheet.css">
+    <link rel="stylesheet" href="TicTacToeStyleSheet.css">
+    <script src="../miscellaneous.js"></script>
+    <title>Kwick-Play</title>
+    <link rel="icon" type="image/png" href="../Pictures/WebsiteLogo.png" />
+    <script src="https://kit.fontawesome.com/c00e3782f8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="pageTitle">Tic Tac Toe</div>
+
+    <div class="navBar">
+
+        <a class="navBarPart" id="navBarIcon" href="../index.html">
+            <img class="navBarIconImg" src="../Pictures/Main/NavBar/NavBarHomeWhite.png" alt="home">
+        </a>
+
+    </div>
+
+    <div class="main">
+
+        <div class="content">
+
+            <div class="programm" style="display: inline-block;">
+
+                <a class="backButton" href="../index.html">&lt;</a> <!-- &lt; = < -->
+
+                <div class="InfoDropdown" onclick="changeInfoDropdownVisibility('InfoDropdownContent')">
+                    <img class="DropdownPic" src="../Pictures/i/info symbol.png" alt="info">
+                    <div class="Dropdown-content" id="InfoDropdownContent">
+                        <p>
+                            Der rote Knopf für Einzelspieler, der blaue Knopf für Mehrspieler
+                        </p>
+                    </div>
+                </div>
+
+                <img src="../Pictures/TicTacToe/tic-tac-toe.png" style="width: 30%; margin-top: 2.083vw;"
+                    alt="hangmanVid">
+
+                <p id="outputmessages">Bitte wählen sie die Spieleranzahl</p>
+
+                <a href="TicTacToe1player/tictactoe1player.html">
+                    <div class="playerButton playerButton1" style="float: left; background-color: red;">
+                        <p>1 Spieler</p>
+                    </div>
+                </a>
+                <a href="tictactoe2player.html">
+                    <div class="playerButton playerButton2" style="float: right; background-color: blue;">
+                        <p>2 Spieler</p>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <img id="footerPic" src="../Pictures/WebsiteLogo.png" alt="footerPic">
+        <br>
+        <p>Kwick-Play</p>
+        <a class="footerLinks" href="../Footer/support.html">Support</a>
+        <br>
+        <br>
+        <a class="footerLinks" href="../Footer/ImageSources.html">Bildquellen</a> &
+        <a class="footerLinks" href="../Footer/licence.html">Lizenzen</a>
+    </div>
+
+</body>
+
+</html>

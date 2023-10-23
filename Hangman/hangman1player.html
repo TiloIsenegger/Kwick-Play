@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="../StyleSheet.css">
+    <link rel="stylesheet" href="HangmanStyleSheet.css">
+    <script src="../miscellaneous.js"></script>
+    <script src="hangman1playerJavaScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+    <title>Kwick-Play</title>
+    <link rel="icon" type="image/png" href="../Pictures/WebsiteLogo.png" />
+</head>
+
+<body>
+
+    <div class="pageTitle">Hangman</div>
+
+    <div class="navBar">
+
+        <a class="navBarPart" id="navBarIcon" href="../index.html">
+            <img class="navBarIconImg" src="../Pictures/Main/NavBar/NavBarHomeWhite.png" alt="home">
+        </a>
+
+    </div>
+
+    <div class="main">
+
+        <div class="content">
+
+            <div class="programm">
+
+                <a class="backButton" href="../Hangman/playerSelectionHangman.html">&lt;</a>
+                <!-- &lt; = < , backbutton-->
+
+                <div class="InfoDropdown" onclick="changeInfoDropdownVisibility('InfoDropdownContent')">
+                    <img class="DropdownPic" src="../Pictures/i/info symbol.png" alt="info">
+                    <div class="Dropdown-content" id="InfoDropdownContent">
+                        <p>
+                            Es muss ein zufälliges Wort Buchstabe für Buchstabe erraten werden <br>
+                            <br>
+                            Das Spiel wird über den Knopf gestartet <br>
+                            <br>
+                            Buchstabe über das Eingabefeld eingeben und Bestätigen <br>
+                            <br>
+                            Richtige Buchstaben werden "unten" eingefügt <br>
+                            <br>
+                            Bei nicht enthaltenen Buchstaben wird ein Versuch abgezogen <br>
+                            <br>
+                            Das Spiel endet nach 9 falschen Versuchen oder wenn das Wort erraten wurde <br>
+
+                        </p>
+                    </div>
+                </div>
+
+                <p class="output pointOfInterest" id="outputmessages">Ein zufälliges Wort
+                    wird
+                    ausgewählt</p>
+
+                <div id="tries" style="display: none;">9</div>
+
+                <img class="hangmanPic" id="hangmanPic" src="../Pictures/hangman/hm.png" alt="hangmanPic">
+
+
+                <div class="row">
+                    <Input autocomplete="off" type="text" id="letterInput" style="display: none;"
+                        placeholder="Buchstabe zum raten"></Input>
+
+                </div>
+                <div class="row"> <!-- 3 buttons, getting changend during game -->
+                    <button class="miscButton" id="submitWord" style="display: inline-block;" onclick="getWord()">Wort
+                        generieren</button>
+                    <button class="miscButton" id="submitLetter" style="display: none;"
+                        onclick="testInputLetter()">Eingeben</button>
+                    <button class="restartButton" id="restart" style="display: none;"
+                        onclick="StartRestartAnimation()"><img id="restartButtonImg" class="restartButtonImg"
+                            src="../Pictures/restart.png" alt="restart"></button>
+                </div>
+                <p class="output pointOfInterest" style="display: none;" id="outputHangman"></p>
+                <div class="pointOfInterest" id="outputUsedLetters">&nbsp;</div>
+            </div>
+
+            <script>
+
+                letterInput.addEventListener("keypress", function (event) { // eventlistener, so you can also press enter instead of pressing the butten
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+                        document.getElementById("submitLetter").click();
+                    }
+                });
+
+            </script>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <img id="footerPic" src="../Pictures/WebsiteLogo.png" alt="footerPic">
+        <br>
+        <p>Kwick-Play</p>
+        <a class="footerLinks" href="../Footer/support.html">Support</a>
+        <br>
+        <br>
+        <a class="footerLinks" href="../Footer/ImageSources.html">Bildquellen</a> &
+        <a class="footerLinks" href="../Footer/licence.html">Lizenzen</a>
+    </div>
+
+</body>
+
+</html>
