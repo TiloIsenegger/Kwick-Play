@@ -1,0 +1,868 @@
+:root {
+
+	--FourPx: 0.208vw;
+	/* 4px */
+	--FourPxTransformed: 0.7488vw;
+
+	--TenPx: 0.521vw;
+	--TenPxTransformed: 1.8756vw;
+
+	--contentFontsize: 1.45vw;
+
+}
+
+@media only screen and (max-width: 700px) {
+
+	/* mostly * 3.6 */
+	* {
+		--FourPx: var(--FourPxTransformed);
+		--TenPx: var(--TenPxTransformed);
+	}
+
+	.MainPageTitle {
+		font-size: 17.8vw !important;
+		padding: 2.8116vw !important;
+	}
+
+	.pageTitle {
+		font-size: 12.6vw !important;
+		padding: 2.8116vw !important;
+	}
+
+	.navBar {
+		--TenPx: var(--TenPxTransformed);
+		border: 0.5616vw solid rgb(18, 28, 34) !important;
+	}
+
+	.navBarPart {
+
+		width: 12.564vw !important;
+
+		margin: 0 3vw !important;
+		--TenPx: var(--TenPxTransformed);
+	}
+
+	.NavBarSeacrchField {
+
+		margin: 2.25vw 0 !important;
+		border-radius: 9.3744vw !important;
+		--TenPx: var(--TenPxTransformed);
+	}
+
+	.library {
+		width: 90vw !important;
+	}
+
+	.cardSlot {
+		width: 100% !important;
+		height: 108vw !important;
+	}
+
+	.gameCard {
+		border: 0.936vw solid rgb(4, 19, 51) !important;
+		--TenPx: 1.8756vw;
+	}
+
+	.CardDescription {
+		font-size: 3.6vw !important;
+	}
+
+	.SymbolImg {
+		width: 6.5736vw !important;
+		margin: 0.936vw !important;
+	}
+
+	.content {
+		width: 100vw !important;
+		--contentFontsize: 5.22vw;
+		--TenPx: 1.8756vw;
+	}
+
+	.programm {
+		border-radius: 2.8116vw !important;
+	}
+
+	.InfoDropdown {
+		margin: 6vw 6vw 0 0 !important;
+		/* 7.2vw 12.6vw !important; */
+		width: 5.6268vw !important;
+		height: 7.2vw !important;
+	}
+
+	.Dropdown-content {
+		--TenPx: var(--TenPxTransformed);
+		width: 65vw !important;
+		padding: 2.25vw 3vw !important;
+		font-size: 4.32vw !important;
+	}
+
+	.SettingsDropdown {
+		width: 5.6268vw !important;
+		height: 7.2vw !important;
+		margin: 6vw 13.2vw 0 0 !important;
+		font-size: 5.22vw !important;
+	}
+
+	.SettingsDropdown-content {
+		margin: 6vw 6vw !important;
+		--TenPx: var(--TenPxTransformed);
+		width: 70vw !important;
+		right: -5.6268vw !important;
+	}	
+
+	.SettingsDropdown-link {
+		font-size: 4.32vw !important;
+		height: 9vw !important;
+	}
+
+	.SettingsButton {
+		--FourPx: var(--FourPxTransformed);
+		width: 8.4384vw !important;
+		height: 8.4384vw !important;
+		font-size: 5.22vw !important;
+		padding: 0 !important;
+	}
+
+	.SettingsButton2 {
+		right: 9.1872vw !important;
+	}
+
+	input {
+		--FourPx: var(--FourPxTransformed);
+		width: 55% !important;
+		font-size: 2.664vw !important;
+		margin: 3.7512vw !important;
+	}
+
+	.playerButton {
+		width: 30% !important;
+	}
+
+	.playerButton1 {
+		left: 10% !important;
+	}
+
+	.playerButton2 {
+		right: 10% !important;
+	}
+
+	.miscButton {
+		width: 50% !important;
+		font-size: 3.24vw !important;
+		--FourPx: var(--FourPxTransformed);
+	}
+
+	.output {
+		font-size: 5.94vw !important;
+		--FourPx: var(--FourPxTransformed);
+		width: 95% !important;
+		margin-top: 9vw !important;
+	}
+
+	.pointOfInterest {
+		--FourPx: var(--FourPxTransformed);
+		--TenPx: var(--TenPxTransformed);
+	}
+
+	.backButton {
+		--tenPx: var(--TenPxTransformed);
+		margin: 6vw 6vw !important;
+		/* 7.4988vw 11.25vw !important; */
+		padding: 0.3744vw 1.8756vw !important;
+		font-size: 5.22vw !important;
+	}
+
+	.restartButton {
+		--TenPx: var(--TenPxTransformed);
+		--FourPx: var(--FourPxTransformed);
+		width: 12% !important;
+		height: 12% !important;
+		padding: 0.936vw !important;
+	}
+
+	.footer {
+		font-size: 2.8116vw !important;
+		padding: 4.7988vw !important;
+	}
+
+	#footerPic {
+		width: 10.8% !important;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+html,
+body {
+	margin: 0vw;
+	padding: 0;
+	background-color: rgb(18, 28, 34);
+	/*CHANGE!*/
+	min-height: 65vh;
+	/*CHANGE!*/
+	font-family: Arial, Copperplate, Fantasy, sans-serif;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+	min-height: 65vh;
+}
+
+.MainPageTitle {
+	width: 100vw;
+	text-align: center;
+	background-color: rgb(99, 124, 249);
+	/*CHANGE!*/
+	/*background-color: rgb(42, 0, 110);*/
+	/*border-radius: 0.521vw;*/
+	font-size: 5vw;
+	/* -> 18vw */
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	padding: 0.781vw;
+}
+
+.pageTitle {
+	width: 100vw;
+	background-color: rgb(99, 124, 249);
+	/*CHANGE!*/
+	text-align: center;
+	font-size: 3.5vw;
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	padding: 0.781vw;
+}
+
+.navBar {
+	display: flex;
+	justify-content: center;
+
+	position: -webkit-sticky;
+	/*for safari*/
+	position: sticky;
+	top: 0;
+
+	z-index: 2;
+	width: 100%;
+
+	background-color: rgb(36, 55, 67);
+	border: 0.156vw solid rgb(18, 28, 34);
+
+	color: white;
+	text-align: center;
+	font-size: 0;
+	border-radius: var(--TenPx);
+	/*padding: 1.042vw;*/
+}
+
+.navBarPart {
+	width: 3.49vw;
+	height: 100%;
+	padding: 0.9vw;
+	/*padding: 1.042vw;*/
+	display: inline-block;
+	transition: 0.2s;
+	border-radius: var(--TenPx);
+}
+
+/*
+.navBarPartSearchFieldDiv {
+	/*position: absolute;
+	top: 0;*/
+/*CHANGE!
+
+	height: 100%;
+	width: fit-content;
+	/*padding: 1.042vw;
+
+	display: inline-block;
+	border-radius: var(--TenPx);
+}
+*/
+
+.NavBarSeacrchField {
+	position: absolute;
+	top: 0;
+	display: none;
+
+	width: 15vw;
+	/*height: 2.799vw;*/
+
+	margin: 0.625vw 0;
+	border-radius: 2.604vw;
+	/*padding: 1.042vw;*/
+}
+
+.navBarPart:hover {
+	background-color: rgb(29, 39, 45);
+	/*CHANGE!*/
+}
+
+#navBarIcon {
+	color: white;
+}
+
+.navBarIconImg {
+
+	width: 100%;
+}
+
+.library {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	width: 75vw;
+
+
+	/*width: 75vw;*/
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgb(183, 201, 212);
+	/*CHANGE!*/
+
+	font-size: 0;
+}
+
+.cardSlot {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	width: 33.333%;
+	height: 30vw;
+}
+
+.gameCard {
+	position: relative;
+	border: 0.26vw solid rgb(4, 19, 51);
+	border-radius: var(--TenPx);
+
+	width: 80%;
+	height: 90%;
+
+	background-color: rgb(99, 124, 249);
+	/*CHANGE!*/
+	box-shadow: 0 0.208vw 0.417vw 0 rgba(0, 0, 0, 0.2), 0 0.313vw 1.042vw 0 rgba(0, 0, 0, 0.19);
+	transition: 0.3s;
+}
+
+.gameCard:hover {
+	box-shadow: 0 0.208vw 0.417vw 0.26vw rgba(0, 0, 0, 0.2), 0 0.313vw 1.042vw 0.26vw rgba(0, 0, 0, 0.19);
+	opacity: 0.95;
+
+	width: 88%;
+	height: 96.666%;
+
+	cursor: pointer;
+}
+
+.cardimg {
+	position: absolute;
+	/* positions the picture in the middle of the gamecard */
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	height: auto;
+	object-fit: cover;
+}
+
+.gameCard .CardDescription {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(4, 19, 51);
+	color: white;
+
+	padding: var(--TenPx);
+	padding-top: calc(var(--TenPx)*2.5);
+	font-size: 1.5vw;
+
+	font-weight: bold;
+	text-align: center;
+}
+
+.CardSymbols {
+	margin-top: 0.521vw;
+	/*HERE px*/
+	display: flex;
+	justify-content: center;
+}
+
+.SymbolImg {
+	color: white;
+
+
+	width: 1.823vw;
+	margin: 0.26vw;
+}
+
+.content {
+	position: relative;
+	font-size: var(--contentFontsize);
+	width: 50vw;
+	height: fit-content;
+	text-align: center;
+	background-color: rgb(36, 55, 67);
+	/*CHANGE!*/
+
+	color: white;
+	font-weight: bold;
+
+	/* padding same size as font-size */
+	border-radius: var(--TenPx);
+	margin: 3vw 0;
+
+}
+
+.content .programm {
+	width: 90%;
+	/*height: 100%;*/
+	/*CHANGE!*/
+	display: inline-block;
+	border: var(--TenPx) solid rgb(183, 201, 212);
+	/*CHANGE!*/
+	background-color: rgb(183, 201, 212);
+	/*CHANGE!*/
+	border-radius: var(--TenPx);
+	color: white;
+	/*CHANGE!*/
+	margin: 5% 0;
+	/*CHANGE!*/
+	text-align: center;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.DropdownPic {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+}
+
+.InfoDropdown {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 3.25vw 3.25vw 1vw 0;
+	/*CHANGE!*/
+	/* -> 7.2vw 12.6vw */
+	display: inline-block;
+	width: 1.563vw;
+	/* -> 5.6268vw */
+	height: 2vw;
+	/* bigger than width, so on hover works better */
+	/* -> 5.6268vw */
+}
+
+.infoDropdownImg {
+	width: 40%;
+	border: var(--FourPx) solid rgb(18, 28, 34);
+	border-radius: var(--TenPx);
+	margin: var(--TenPx);
+}
+
+.Dropdown-content {
+	display: none;
+	position: absolute;
+	right: 0;
+
+	border: var(--FourPx) solid rgb(18, 28, 34);
+	/*HERE px*/
+	/*CHANGE! HERE maby other color rgb(58, 95, 145)*/
+	border-radius: var(--TenPx);
+
+	/* transformed */
+
+	background-color: rgb(58, 95, 145, 0.95);
+	/*CHANGE!*/
+	width: 25vw; /*HERE px*/
+	/* -> 108vw */
+	box-shadow: 0vw 0.417vw 0.833vw 0vw rgba(0, 0, 0, 0.2);
+	padding: 0.625vw 0.833vw;
+	/* -> 2.25vw 3vw */
+	font-size: 1.2vw; /*HERE px*/
+	z-index: 1;
+	word-wrap: break-word;
+}
+
+@media only screen and (min-width: 700px) {
+
+	.InfoDropdown:hover .Dropdown-content {
+		display: block;
+	}
+}
+
+.SettingsDropdown {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 3.25vw 5.813vw 1vw 0;
+	/*CHANGE!*/
+	/* -> 7.2vw 12.6vw */
+	display: inline-block;
+	width: 1.563vw;
+	/* -> 5.6268vw */
+	height: 2vw;
+	/* bigger than width, so on hover works better */
+	/* -> 7.3vw */
+}
+
+@media only screen and (min-width: 700px) {
+
+	.SettingsDropdown:hover .SettingsDropdown-content {
+		display: block;
+	}
+}
+
+.SettingsDropdown-link {
+	position: relative;
+	height: 2.5vw;
+	/*HERE px*/
+
+	font-size: 1.2vw;
+	/* -> 4.32vw */
+	padding: var(--TenPx);
+	border-radius: var(--TenPx);
+	text-align: left;
+	transition-duration: 0.25s;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.SettingsDropdown-content {
+	display: none;
+	position: absolute;
+	right: -0.052vw;
+	top: 1.9vw;
+	border: var(--FourPx) solid rgb(18, 28, 34);
+	/*HERE px*/
+	/*CHANGE!*/
+	border-radius: var(--TenPx);
+
+	background-color: rgb(58, 95, 145, 0.95);
+	/*CHANGE!*/
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+	padding: var(--TenPx);
+	z-index: 1;
+	word-wrap: break-word;
+
+	width: 22vw;
+	/* -> 70vw */
+}
+
+.SettingsButton {
+
+	width: 2.344vw;
+	/* -> 8.4384 */
+	height: 2.344vw;
+	/* -> 8.4384 */
+
+	position: absolute;
+	right: 0;
+
+	margin: var(--FourPx);
+
+	font-weight: bold;
+	font-size: 1.45vw;
+	/* -> 5.22vw */
+
+	color: rgb(18, 28, 34);
+	border: var(--FourPx) solid rgb(36, 55, 67);
+	/*CHANGE!*/
+	border-radius: var(--TenPx);
+
+	background-color: rgb(85, 102, 186);
+	/*CHANGE!*/
+	transition-duration: 0.25s;
+}
+
+.SettingsButton2 {
+	right: 2.552vw;
+	/* -> 9.1872vw */
+
+}
+
+.SettingsButton:hover {
+	cursor: pointer;
+	background: rgba(85, 102, 186, 0.5);
+	/*CHANGE!*/
+}
+
+.SettingsButton:disabled {
+	opacity: 0.5;
+}
+
+.SettingsButton:hover:disabled {
+	cursor: not-allowed;
+	background-color: rgb(68, 121, 169);
+}
+
+/*
+.InfoDropdown:hover .Dropdown-content {
+	display: block;
+}
+*/
+
+input {
+	width: 40%;
+	/* -> 55% */
+	padding: var(--TenPx);
+	margin: 1.042vw;
+	/* (3.7512vw) */
+	font-size: 0.74vw;
+	/* -> 2.664vw */
+	font-weight: bold;
+	border: var(--FourPx) solid rgb(27, 37, 70);
+	/*CHANGE!*/
+	border-radius: var(--TenPx);
+	color: rgb(58, 95, 145);
+	/*CHANGE!*/
+	/* HERE! don't like the color yet */
+}
+
+input:focus {
+	outline: none;
+}
+
+input:disabled:hover {
+	cursor: not-allowed;
+}
+
+.playerButton {
+	width: 25%;
+	/* -> 30% */
+	height: fit-content;
+	padding: 0.521vw;
+
+	border-radius: var(--TenPx);
+	box-shadow: 0 0.417vw 0.833vw 0 rgba(0, 0, 0, 0.2), 0 0.313vw 1.042vw 0 rgba(0, 0, 0, 0.19);
+	color: white;
+	-webkit-transition-duration: 0.4s;
+	/* Safari */
+	transition-duration: 0.4s;
+	margin-bottom: 1vw;
+}
+
+.playerButton1 {
+	margin-left: 12.5%;
+	/* -> 10% */
+}
+
+.playerButton2 {
+	margin-right: 12.5%;
+	/* -> 10% */
+}
+
+.playerButton:hover {
+	box-shadow: 0 0.625vw 0.833vw 0 rgba(0, 0, 0, 0.24), 0 0.885vw 1.302vw 0 rgba(0, 0, 0, 0.19);
+	transform: translateY(-0.208vw);
+}
+
+.miscButton {
+	background: rgb(58, 95, 145);
+	/*CHANGE!*/
+	border: none;
+	/*CHANGE!*/
+	border-radius: var(--TenPx);
+
+	color: white;
+	/*CHANGE!*/
+	/* HERE! don't like the color yet */
+
+	padding: var(--TenPx);
+	margin: var(--TenPx) auto;
+	width: 35%;
+	/* -> 45% */
+	font-size: 0.9vw;
+	/* -> 3.24vw */
+	font-weight: bold;
+	box-shadow: 0 0.417vw 0.833vw 0 rgba(0, 0, 0, 0.2), 0 0.313vw 1.042vw 0 rgba(0, 0, 0, 0.19);
+	-webkit-transition-duration: 0.4s;
+	/* Safari */
+	transition-duration: 0.25s;
+}
+
+.miscButton:hover {
+	box-shadow: 0 0.625vw 0.833vw 0 rgba(0, 0, 0, 0.24), 0 0.885vw 2.604vw 0 rgba(0, 0, 0, 0.19);
+	transform: translateY(-0.104vw);
+}
+
+.miscButton:active {
+	transition-duration: 0.1s;
+	box-shadow: 0 0.417vw 0.833vw 0 rgba(0, 0, 0, 0.24), 0 0.521vw 1.563vw 0 rgba(0, 0, 0, 0.19);
+	transform: scale(.98);
+}
+
+.miscButton:disabled:hover {
+	box-shadow: 0 0.417vw 0.833vw 0 rgba(0, 0, 0, 0.2), 0 0.313vw 1.042vw 0 rgba(0, 0, 0, 0.19);
+	transform: none;
+	cursor: not-allowed;
+}
+
+.output {
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	/*margin-left: 10%;*/
+	background-color: rgb(58, 95, 145);
+	/*CHANGE!*/
+	color: white;
+	/*CHANGE!*/
+	margin: calc(var(--TenPx) *2) auto;
+	word-wrap: break-word;
+	font-size: 1.65vw;
+	/* -> 5.94vw */
+}
+
+.pointOfInterest {
+	padding: var(--TenPx);
+	border: none;
+	/*CHANGE!*/
+	background-color: rgb(99, 124, 249);
+	/*CHANGE!*/
+	border-radius: var(--TenPx);
+	text-align: center;
+}
+
+.backButton {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: none;
+	background-color: rgb(58, 95, 145);
+	/*CHANGE!*/
+
+	border-radius: var(--TenPx);
+
+	color: rgb(26, 0, 68);
+	/*CHANGE!*/
+	/* HERE! maby different color? */
+
+	box-shadow: 0 0.417vw 0.833vw 0 rgba(0, 0, 0, 0.2), 0 0.313vw 1.042vw 0 rgba(0, 0, 0, 0.19);
+	font-weight: bold;
+
+	margin: 3.25vw 3.25vw;
+	/*CHANGE!*/
+	/* -> 6vw 6vw */
+	padding: 0.104vw 0.521vw;
+	/* -> 0.3744vw 1.8756vw */
+
+	-webkit-transition-duration: 0.3s;
+	/* Safari */
+	transition-duration: 0.25s;
+}
+
+.backButton:hover {
+	box-shadow: 0 0.625vw 0.833vw 0 rgba(0, 0, 0, 0.24), 0 0.885vw 2.604vw 0 rgba(0, 0, 0, 0.19);
+	transform: translateY(-0.104vw);
+}
+
+.restartButton {
+	padding: 0.26vw;
+	border: var(--FourPx) solid black;
+	border-radius: 1000px;
+	box-shadow: 0 0.417vw 0.833vw 0 rgba(0, 0, 0, 0.2), 0 0.313vw 1.042vw 0 rgba(0, 0, 0, 0.19);
+	background-color: rgb(58, 95, 145);
+
+	width: 6%;
+	/* -> 12% */
+	height: 6%;
+	/* -> 12% */
+
+	/*transform: translateY(0.208vw);*/
+	-webkit-transition-duration: 0.25s;
+	/* Safari */
+	transition-duration: 0.25s;
+}
+
+.restartButton:hover {
+	/*box-shadow: 0 0.625vw 0.833vw 0 rgba(0, 0, 0, 0.24), 0 0.885vw 2.604vw 0 rgba(0, 0, 0, 0.19);*/
+	transform: translateY(-0.104vw);
+}
+
+.restartButton:active {
+	transition-duration: 0.1s;
+	box-shadow: 0 0.417vw 0.833vw 0 rgba(0, 0, 0, 0.24), 0 0.521vw 1.563vw 0 rgba(0, 0, 0, 0.19);
+	transform: scale(.98);
+	/*transform: translateY(0.156vw);*/
+}
+
+.restartAnimation {
+	animation: restartAnimation 0.5s 1;
+}
+
+.restartButtonImg {
+	width: 90%;
+	margin: 5%;
+}
+
+.footer {
+	width: 100%;
+
+	background-color: rgb(36, 55, 67);
+	/*CHANGE!*/
+	border-top: 0.156vw solid rgb(18, 28, 34);
+	/*HERE px*/
+	/*CHANGE!*/
+
+	color: white;
+	text-align: center;
+	padding: 1.333vw;
+	font-size: 0.9vw;
+	/* -> 2.8116vw */
+	font-weight: bold;
+}
+
+.footer #footerPic {
+	width: 4%;
+	/* -> 10.8% */
+	margin: 0.26vw;
+}
+
+.footerLinks {
+	text-decoration: underline;
+	margin: 0.667vw;
+}
+
+/* animations */
+
+@keyframes idle {}
+
+@keyframes restartAnimation {
+	/* HERE! experiment with animation to make it better! */
+
+	0% {
+		transform: rotate(0deg);
+	}
+
+	50% {}
+
+	100% {
+		transform: rotate(-360deg);
+
+	}
+}
+
+
+@media only screen and (max-width: 700px) {
+
+/*CSS-Code für Smartphone Bildschirmgrösse*/
+}
